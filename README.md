@@ -1,5 +1,5 @@
 # Computacao-Paralela
-##Componentes do grupo:
+## Componentes do grupo:
   - Felipe 
   - Joyce
   - Ryan

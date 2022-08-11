@@ -1,5 +1,5 @@
 # Computacao-Paralela
 ## Componentes do grupo:
-  - Felipe 
+  - Felipe Jien Te Chuang   42008875
   - Joyce
   - Ryan

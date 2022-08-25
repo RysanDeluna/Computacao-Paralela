@@ -1,4 +1,4 @@
-// 14. Faça um rotina que insira um caracter em uma string do tipo char Str[100], dada a posição do caracter.
+// 14. FaÃ§a um rotina que insira um caracter em uma string do tipo char Str[100], dada a posiÃ§Ã£o do caracter.
 #include <stdio.h>
 #define TAM 5
 #define charac 'x'

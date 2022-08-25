@@ -1,6 +1,6 @@
 // 14. Faça um rotina que insira um caracter em uma string do tipo char Str[100], dada a posição do caracter.
 #include <stdio.h>
-#define TAM 5
+#define TAM 100
 #define charac 'x'
 
 int insC(char str[TAM], int pos);

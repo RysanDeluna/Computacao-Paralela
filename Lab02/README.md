@@ -20,3 +20,4 @@
 ### programa serial:
 > ![image](https://cdn.discordapp.com/attachments/913148949135769641/1014682800890322984/unknown.png)
 
+Como podemos ver pelas imagens acima, o tempo de execução não teve muita diferença, pois houve dependência nas operações de multiplicação dos valores. 

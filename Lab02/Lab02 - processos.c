@@ -76,3 +76,4 @@ void impares(int j, int sharedMem[])
 			sharedMem[0] *= j;
 	}
 }
+ 

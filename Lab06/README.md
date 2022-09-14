@@ -20,3 +20,4 @@
 ### programa serial:
 
 Como podemos ver pelas imagens acima, o tempo de execução não teve muita diferença, pois houve dependência nas operações de multiplicação dos valores. 
+ 

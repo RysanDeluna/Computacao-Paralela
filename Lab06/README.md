@@ -1,23 +1,37 @@
 # Como compilamos o código:
--  A compilação está detalhada e implementada no arquivo <runn.sh>. Basta executar pelo bash do Linux da seguinte forma:   <center>`bash runn.sh`</center> 
--  Para compilar sem o comando acima, execute as seguintes instruções:<br>
- `gcc -pthread main.c -o paralela` <br> `./paralela <numero de threads>`
- 
+-  A compilação está detalhada e implementada no arquivo <runn.sh>, portanto basta executar utilizando o Bash da seguinte forma: 
+
+```
+$ bash runn.sh
+```
+
+> Os arquivos fonte .c devem estar na mesma pasta que o _script_
+
+-  Para compilar sem o comando acima, execute as seguintes instruções:
+
+### Versão com PThread:
+```
+$ gcc -pthread main.c -o paralela
+$ ./paralela <numero de threads>
+```
+### Versão Serial
+```
+$ gcc main2.c -o serial
+$ ./serial
+```
+
 ---
 
-# Modificação:
-- Define-se as variáveis globais e cosntantes
-- Cria-se threads utilizando uma sub-rotina `pthread_create()` com os parâmetros que aloca memória, NULL, nome da rotina e argumento da rotina;   
-- Também se utiliza sub-rotina `join` para juntar e esperar todos os threads prontos
-
-
+# Implementação da função `main()`:
+- Declara-se um vetor para variáveis do tipo `pthread_t`; 
+- Cria-se um número definido de threads para a função `Pth_mat_vect()` utilizando a sub-rotina `pthread_create()` que serão alocadas no vetor `threadsss`;
+- Ao fim, utiliza-se a sub-rotina `pthread_join()` para aguardar o fim da execução de cada thread criada e mesclar seus resultados. 
 
 ---
 
 # Exemplo de execução: 
-### programa paralelo:
+### Programa em paralelo:
+![image](https://user-images.githubusercontent.com/82891214/190283772-32eacecd-b4a8-4c8e-930f-d84f84ff7e72.png)
 
-### programa serial:
-
-Como podemos ver pelas imagens acima, o tempo de execução não teve muita diferença, pois houve dependência nas operações de multiplicação dos valores. 
- 
+### Programa serial:
+![image](https://user-images.githubusercontent.com/82891214/190283792-5ce34e06-3996-4946-9ba7-49f4c04d1988.png)

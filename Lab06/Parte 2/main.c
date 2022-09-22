@@ -33,6 +33,7 @@ void* Thread_sum(void* rank){
 int main(int argc, char* argv[]) {
 	pthread_t threadsss[thread_count];
 	thread_count = strtol(argv[1], NULL, 10);
+	
 	n = strtol(argv[2], NULL, 10);
 	sum = 0.0;
 	

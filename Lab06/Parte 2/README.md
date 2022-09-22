@@ -29,3 +29,4 @@ $ ./main <numero de threads> <quantidade de digitos>
 ### Programa em paralelo:
 ![image](https://user-images.githubusercontent.com/74800062/191617118-72472c91-b347-4e2c-9e41-c7d6b9786ee4.png)
 
+ 

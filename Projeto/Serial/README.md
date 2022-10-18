@@ -14,4 +14,11 @@ Desta forma, o resultado mais preciso obtido possui apenas 15 casas decimais cor
 Abaixo está o procedimento de como compilar e a saída no terminal de AWS:
 ![image](https://user-images.githubusercontent.com/82891214/196532243-4568ef41-564c-4f14-a59f-8a4a81547ba7.png)
 
- 
+## Maiores problemas
+
+1. Limitações acerca da estrutura de dados em C
+2. Como definir um laço infinito que leve ao maior limite
+
+## Possível resolução
+
+2. Definir um limitador no tempo de execução.

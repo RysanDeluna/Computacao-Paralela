@@ -20,3 +20,4 @@ Como pode ver na imagem acima, não é possível rodar acima 50 interações, al
 
 ## SpeedUp
 
+Sp = Tempo de um processador / Tempo de p processadores = 0,001 / 0,001 = 1

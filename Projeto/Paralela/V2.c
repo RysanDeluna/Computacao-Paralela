@@ -34,8 +34,11 @@ void *taylor(void* rank)
 //	printf("myrank = %ld\n", my_rank);
 
     for (i = my_first_i; i < my_last_i; i++) 
+	{
+		pthread_mutex_lock(&brabo);
 		my_tysum += 1 / (double) fat(i);
-	
+		pthread_mutex_unlock(&brabo);
+	}
 	pthread_mutex_lock(&brabo);
 	tysum += my_tysum;
 	pthread_mutex_unlock(&brabo);

@@ -15,7 +15,7 @@ Ressalta-se o uso do *mutex* para impedir que as duas alterem a região crítica
 ## Problemas encontrados
 
 1. Dificuldade de rodar acima de 50 iteração
-2. Há um core dumped em relação ao tamanho do vetor por valor alto, em que armazena o valor do fatorial
+2. Há um core dumped em relação ao tamanho do vetor por ser valor alto, em que armazena o valor do fatorial
 3. Máximo de fatorial certo é 20.
 4. Dificuldade em conectar em AWS.
 

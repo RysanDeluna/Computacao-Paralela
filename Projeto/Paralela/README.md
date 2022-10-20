@@ -14,7 +14,9 @@ Ressalta-se o uso do *mutex* para impedir que as duas alterem a região crítica
 ---
 ## Problemas encontrados
 
-Como pode ver na imagem acima, não é possível rodar acima 50 interações, além disso houve core dumped em relação ao tamanho do vetor com valor de 1000000 iterações.
+1. Dificuldade de rodar acima de 50 iteração
+2. Há um core dumped em relação ao tamanho do vetor, em que armazena o valor do fatorial
+3. Máximo de fatorial certo é 20.
 
 ---
 

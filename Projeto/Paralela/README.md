@@ -14,3 +14,5 @@ Ressalta-se o uso do *mutex* para impedir que as duas alterem a região crítica
 ## Problemas encontrados
 
 ---
+Não eh possível rodar acima 60 interações 
+Core dumped em relação ao tamanho do vetor

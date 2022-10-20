@@ -9,9 +9,14 @@ Ressalta-se o uso do *mutex* para impedir que as duas alterem a região crítica
 
 ---
 ## Saída
+![image](https://user-images.githubusercontent.com/74800062/196840840-dba3009e-42eb-4808-9351-29e7ae87e937.png)
 
 ---
 ## Problemas encontrados
 
+Como pode ver na imagem acima, não é possível rodar acima 50 interações, além disso houve core dumped em relação ao tamanho do vetor com valor de 1000000 iterações.
+
 ---
-Não é possível rodar acima 60 interações, além disso houve coore dumped em relação ao tamanho do vetor.
+
+## SpeedUp
+

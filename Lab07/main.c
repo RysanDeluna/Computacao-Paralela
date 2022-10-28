@@ -42,6 +42,9 @@ void Trap (double a, double b, int n, double* global_result_p){
         my_result += f(x);
     }
     my_result = my_result*h;
+    
+  #    pragma omp critical
+    *global_result_p += my_result;
 }
 
 double f (double x) { return cos(pow(e, -x)); }

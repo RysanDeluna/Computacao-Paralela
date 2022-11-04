@@ -32,16 +32,21 @@ void Trap (double a, double b, int n, double* global_result_p){
     int my_rank = omp_get_thread_num();
     int thread_count = omp_get_num_threads();
 
-    h = (b-a)/n;
+    h = (b-a) / n;
+    // Definição das variáveis locais
     local_n = n/thread_count;
-    local_a = a + my_rank*local_n*h;
-    local_b = local_a + local_n*h;
-    my_result = (f(local_a) + f(local_b))/ 2.0;
-    for (i = 1; i <= local_n-1; i++){
-        x = local_a + i*h;
+    local_a = a + my_rank * local_n * h;
+    local_b = local_a + local_n * h;
+    // Cálculo do trapézio local
+    my_result = (f(local_a) + f(local_b)) / 2.0;
+    // Se move pela curva da função
+    for (i = 1; i <= local_n - 1; i++)
+    {
+        x = local_a + i * h;
         my_result += f(x);
     }
-    my_result = my_result*h;
+    my_result = my_result * h;
+    if (my_result < 0) my_result *= -1;  // O valor da área não pode ser negativo
     
   #    pragma omp critical
     *global_result_p += my_result;

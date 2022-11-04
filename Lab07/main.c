@@ -17,7 +17,7 @@ int main(int argc, char* argv[]){
     thread_count = strtol(argv[1], NULL, 10);
     printf("Enter a, b, and n\n");
     scanf("%lf %lf %d", &a, &b, &n);
-    if (a > b) troca(&a, &b);
+    
   #  pragma omp parallel num_threads(thread_count)
     Trap (a, b, n, &global_result);
 
@@ -56,9 +56,3 @@ void Trap (double a, double b, int n, double* global_result_p){
 
 double f (double x) { return cos(pow(e, -x)); }
 
-void troca (double * a_p, double * b_p) 
-{
-    int temp = *a_p;
-    *a_p = *b_p;
-    *b_p = temp;
-}

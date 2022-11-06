@@ -53,6 +53,7 @@ void Trap (double a, double b, int n, double* global_result_p, omp_lock_t trava)
     {
         x = local_a + i * h;
         my_result += f(x);
+    }
     
     my_result = my_result * h;
     if (my_result < 0) my_result *= -1;  // O valor da área não pode ser negativo

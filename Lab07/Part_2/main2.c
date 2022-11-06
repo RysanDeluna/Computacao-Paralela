@@ -5,7 +5,7 @@
 #include <math.h>
 #define e 2.7182818
 
-void Trap (double a, double b, int n, double* global_result_p);
+void Trap (double a, double b, int n, double* global_result_p, omp_lock_t trava);
 double f (double x);
 
 
@@ -28,7 +28,7 @@ int main(int argc, char* argv[]){
     printf("With n = %d, trapezoids, our estimate\n", n);
     printf("of the integral from %f to %f = %.14e\n", a, b, global_result);
 
-    omp_lock_destroy(&trava);
+    
     return 0;
 }
 

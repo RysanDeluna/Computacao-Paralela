@@ -6,7 +6,7 @@
 
 void Trap (double a, double b, int n, double* global_result_p);
 double f (double x);
-void troca (double* a_p, double* b_p);
+
 
 int main(int argc, char* argv[]){
     double global_result = 0.0;

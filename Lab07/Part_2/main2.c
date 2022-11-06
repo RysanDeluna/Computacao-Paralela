@@ -48,12 +48,12 @@ void Trap (double a, double b, int n, double* global_result_p, omp_lock_t trava)
     // Cálculo do trapézio local
     my_result = (f(local_a) + f(local_b)) / 2.0;
     // Se move pela curva da função
-    # pragma omp parallel for 
-    /*for (i = 1; i <= local_n - 1; i++)
+    //# pragma omp parallel for 
+    for (i = 1; i <= local_n - 1; i++)
     {
         x = local_a + i * h;
         my_result += f(x);
-    }*/
+    
     my_result = my_result * h;
     if (my_result < 0) my_result *= -1;  // O valor da área não pode ser negativo
     

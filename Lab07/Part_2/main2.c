@@ -17,8 +17,11 @@ int main(int argc, char* argv[]){
     int thread_count;
 
     thread_count = strtol(argv[1], NULL, 10);
-    printf("Enter a, b, and n\n");
-    scanf("%lf %lf %d", &a, &b, &n);
+    a = 0;
+    b = 5;
+    n = 1000000;
+    //printf("Enter a, b, and n\n");
+    //scanf("%lf %lf %d", &a, &b, &n);
   #  pragma omp parallel num_threads(thread_count)
     Trap (a, b, n, &global_result, trava);
 
@@ -46,11 +49,11 @@ void Trap (double a, double b, int n, double* global_result_p, omp_lock_t trava)
     my_result = (f(local_a) + f(local_b)) / 2.0;
     // Se move pela curva da função
     # pragma omp parallel for 
-    for (i = 1; i <= local_n - 1; i++)
+    /*for (i = 1; i <= local_n - 1; i++)
     {
         x = local_a + i * h;
         my_result += f(x);
-    }
+    }*/
     my_result = my_result * h;
     if (my_result < 0) my_result *= -1;  // O valor da área não pode ser negativo
     

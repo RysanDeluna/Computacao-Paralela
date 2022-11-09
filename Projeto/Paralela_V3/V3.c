@@ -18,7 +18,7 @@ unsigned long long int fat(int n)
 	return fats[n];
 }
 
-void taylor(long long* global_result_p){
+void taylor(long double* global_result_p){
     int my_rank = omp_get_thread_num();
     int thread_count = omp_get_num_threads();
 
@@ -37,7 +37,7 @@ void taylor(long long* global_result_p){
 
 int main(int argc, char *argv[])
 {
-    long long global_result = 0.0;
+    long double global_result = 0.0;
     int n;
     
     QNTD_THREADS = strtol(argv[1], NULL, 10);

@@ -1,1 +1,2 @@
-# Como é feito o controle de acesso à região crítica
+# Como é feito o controle de acesso à região crítica:
+A expresssão `#pragma omp critical` funciona de forma que impede os threads acessarem a mesma área da memória, ou seja, para acessar a memória somente um thread pode acessar, sendo assim não causa conflito no espaço. No nosso caso, essa expressão funciona para impedir a soma das frações a adicionarem direto no resultado final. Portanto, primeiramente é calculado fatorial do número, em seguida é resolvido a fração, por fim é adicionado ao variante global.

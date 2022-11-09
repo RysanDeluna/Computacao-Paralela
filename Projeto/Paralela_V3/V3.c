@@ -3,10 +3,8 @@
 #include <omp.h> 
 
 long long int      	pedaco;
-long double        	tysum;
 int                	QNTD_THREADS;
-pthread_mutex_t    	brabo;
-long double			soma;
+
 
 long long int fats[1000000];
 

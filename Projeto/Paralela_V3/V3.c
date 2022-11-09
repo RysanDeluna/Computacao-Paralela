@@ -15,7 +15,7 @@ unsigned long long int fat(int n) {
   return fats[n];
 }
 
-void taylor(int n, long double *global, omp_lock_t trava) {
+void taylor(int n, long double *global) {
   long double my_result = 0.0;
   int minha_thread = omp_get_thread_num();
   int thread_count = omp_get_num_threads();
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
   fat(50);
 
 #pragma omp parallel num_threads(thread_count)
-  long double taylor(50, &global, trava);
+  taylor(50, &global);
 
   printf("O resultado obtido é: %.33Lf \n", global);
   return 0;

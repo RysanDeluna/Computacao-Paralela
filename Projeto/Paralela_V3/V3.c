@@ -18,7 +18,7 @@ unsigned long long int fat(int n)
 	return fats[n];
 }
 
-void taylor(double* global_result_p){
+void taylor(long long* global_result_p){
     int my_rank = omp_get_thread_num();
     int thread_count = omp_get_num_threads();
 
@@ -37,7 +37,7 @@ void taylor(double* global_result_p){
 
 int main(int argc, char *argv[])
 {
-    double global_result = 0.0;
+    long long global_result = 0.0;
     int n;
     
     QNTD_THREADS = strtol(argv[1], NULL, 10);
@@ -47,5 +47,8 @@ int main(int argc, char *argv[])
 
  #  pragma omp parallel num_threads(QNTD_THREADS)
     taylor(&global_result);
+
+    printf("resultado: %.33Lf \n", global_result);
+    
 }
  

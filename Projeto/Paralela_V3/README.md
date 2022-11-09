@@ -52,7 +52,7 @@ Devido à alguns problemas no ambiente AWS, não foi possível testar as impleme
 
 
 ### 2 Processador
-![image](https://user-images.githubusercontent.com/74800062/200965743-1bb0b981-826f-4d9b-bb2c-5cf0bac194b9.png)
+![image](https://user-images.githubusercontent.com/74800062/200966465-76cd2e61-3659-47b0-a5d5-5cf697a53beb.png)
 ![image](https://user-images.githubusercontent.com/74800062/200965773-d89f6a64-f138-4565-85f0-edba046c9673.png)
 ![image](https://user-images.githubusercontent.com/74800062/200965814-c38ae34e-11b4-466b-b569-9318fc2b84f1.png)
 

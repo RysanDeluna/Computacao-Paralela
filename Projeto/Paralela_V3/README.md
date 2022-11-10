@@ -41,8 +41,7 @@ Devido à alguns problemas no ambiente AWS, não foi possível testar as impleme
 | Média | |5.333s | 1000 |
 
 ## GRÁFICO
-
-
+![image](https://user-images.githubusercontent.com/74800062/200967646-8a30bce6-da7c-4054-adb8-cbd4807fd32c.png)
 
 # Imagens de execução
 

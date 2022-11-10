@@ -2,9 +2,9 @@
 
 Desenvolvemos o programa com a **linguagem C** e compilamos com **GCC** no ambiente AWS utilizando o processador t3.micro de 2 núcleos. Além disso, utilizamos processador t2.micro de 1 núcleo para comparar o tempo de execução entre eles.
 
-Nele há duas funções, `unsigned long long int fat(int n)` e `void taylor(int n, long double *global)`. A primeira é responsável em calcular o fatorial e na segunda, realiza o cálculo de Euler com somas sucessivas de acordo com a thread que está sendo executada.
+Nele há duas funções, `unsigned long long int fat(int n)` e `void taylor(int n, long double *global)`. A primeira é responsável em calcular o fatorial, enquanto na segunda, realiza-se o cálculo de Euler com somas sucessivas de acordo com a thread que está sendo executada.
 
-Além disso, utilizamos `OpenMP` para criar threads e para impedir o acesso a região crítica, implementamos `#pragma omp critical`.
+Além disso, utilizamos a biblioteca `OpenMP` para controlar o acesso às threads e as gerenciar da maneira mais adequada. 
 
 
 # Compilação
@@ -30,7 +30,7 @@ Devido à alguns problemas no ambiente AWS, não foi possível testar as impleme
 | Média | |6.667s | 1000 |
 
 
-### 2 Processador
+### 2 Processadores
 | Execução | Nº de Threads | Tempo | Número de n |
 | --- | --- | --- | --- | 
 | 1 | 15 | 210s | 10.000 |
